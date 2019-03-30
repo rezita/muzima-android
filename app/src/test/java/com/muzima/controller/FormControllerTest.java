@@ -1,6 +1,6 @@
 /*
- * Copyright (c) 2014 - 2018. The Trustees of Indiana University, Moi University
- * and Vanderbilt University Medical Center.
+ * Copyright (c) The Trustees of Indiana University, Moi University
+ * and Vanderbilt University Medical Center. All Rights Reserved.
  *
  * This version of the code is licensed under the MPL 2.0 Open Source license
  * with additional health care disclaimer.
@@ -78,9 +78,7 @@ public class FormControllerTest {
         sntpService = mock(SntpService.class);
         ObservationService observationService = mock(ObservationService.class);
         EncounterService encounterService = mock(EncounterService.class);
-        PatientController patientController = mock(PatientController.class);
-        MuzimaSettingController muzimaSettingsController = mock(MuzimaSettingController.class);
-        formController = new FormController(formService, patientService, lastSyncTimeService, sntpService, observationService, encounterService, patientController, muzimaSettingsController);
+        formController = new FormController(formService, patientService, lastSyncTimeService, sntpService, observationService, encounterService);
         LastSyncTime lastSyncTime = mock(LastSyncTime.class);
         mockDate = mock(Date.class);
     }
